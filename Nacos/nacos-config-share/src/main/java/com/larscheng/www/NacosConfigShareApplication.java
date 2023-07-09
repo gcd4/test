@@ -28,7 +28,7 @@ public class NacosConfigShareApplication {
     @Value("${share.config2}")
     private String shareConfig2;
 
-    @RequestMapping("/getValue")
+    @RequestMapping("/getValue")  // http://localhost:9984/getValue
     public String getValue() {
         return share;
     }
@@ -52,7 +52,7 @@ public class NacosConfigShareApplication {
     private String shareConfig4;
 
 
-    @RequestMapping("/getShare3")
+    @RequestMapping("/getShare3")  // http://localhost:9984/getShare3
     public String getShare3() {
         return shareConfig3;
     }

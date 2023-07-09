@@ -20,16 +20,17 @@ public class NacosConsumerApplication {
     }
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RestTemplate restTemplate; 
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced // 服务消费者是通过RestTemplate+Ribbon的方式来进行服务调用
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
 
-    @GetMapping("/consumer")
+    @GetMapping("/consumer") //http://127.0.0.1:9528/consumer
     public String test() {
         return restTemplate.getForObject("http://nacos-provide/helloNacos",String.class);
+        //return restTemplate.getForObject("http://nacos-provide1/helloNacos",String.class); // ps add test
     }
 }

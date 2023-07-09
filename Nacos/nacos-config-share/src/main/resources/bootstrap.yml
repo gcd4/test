@@ -9,8 +9,12 @@ spring:
         server-addr: 127.0.0.1:8848
         prefix: ${spring.application.name}
         file-extension: yml
+        #指定要读取共享配置文件的DataID,多个文件用,分隔.  Nacos增加shareconfig1.yml
         shared-dataids: shareconfig1.yml,shareconfig2.yml
+        #指定共享配置文件支持自动刷新
         refreshable-dataids: shareconfig1.yml,shareconfig2.yml
+        #由用户自定义指定需要加载的配置DataID、Group以及是否自动刷新
+        #一个集合（List），支持多个配置文件的指定
         ext-config:
           - data-id: shareconfig3.yml
             group: SHARE3_GROUP
@@ -21,4 +25,4 @@ spring:
 
 
 
-
+# // https://blog.csdn.net/qq_33619378/article/details/98972790

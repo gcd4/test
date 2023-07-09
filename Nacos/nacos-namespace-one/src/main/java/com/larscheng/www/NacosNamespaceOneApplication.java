@@ -26,3 +26,11 @@ public class NacosNamespaceOneApplication {
         return config;
     }
 }
+
+/**
+ * https://blog.csdn.net/qq_33619378/article/details/98634900
+ * 
+ * 方案1  使用命名空间隔离环境dev/test/prof
+ * 方案2  使用命名空间隔离租户张三/李四/王五
+ * 
+ * */

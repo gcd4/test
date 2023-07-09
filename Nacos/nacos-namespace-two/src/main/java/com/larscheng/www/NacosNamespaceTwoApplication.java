@@ -18,10 +18,10 @@ public class NacosNamespaceTwoApplication {
         SpringApplication.run(NacosNamespaceTwoApplication.class, args);
     }
 
-    @Value("${nacos.config}")
+    @Value("${nacos.config}") 
     private String config;
 
-    @RequestMapping("/getValue")
+    @RequestMapping("/getValue") 
     public String getValue() {
         return config;
     }

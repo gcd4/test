@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 开启服务注册发现功能
 @SpringBootApplication
 public class NacosProvideApplication {
 
@@ -15,9 +15,9 @@ public class NacosProvideApplication {
         SpringApplication.run(NacosProvideApplication.class, args);
     }
 
-
     @GetMapping("/helloNacos")
     public String helloNacos(){
+        System.out.println("zhy----");
         return "你好，nacos！";
     }
 }
