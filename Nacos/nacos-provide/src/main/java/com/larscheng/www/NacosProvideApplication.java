@@ -17,7 +17,7 @@ public class NacosProvideApplication {
 
     @GetMapping("/helloNacos")
     public String helloNacos(){
-        System.out.println("zhy--1111--test---");
+        System.out.println("zhy--2222--test---");
         return "你好，nacos！";
     }
 }
